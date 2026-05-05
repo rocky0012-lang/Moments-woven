@@ -83,6 +83,10 @@ To run this project locally:
     ```
 
 ---
+## 🤖 Android Studio
+
+**App in AI Studio**: [aistudio](https://ai.studio/apps/034345d6-02ea-4505-8d9d-a5a43c2bf357)
+
 
 ## 🙌 Author
 
