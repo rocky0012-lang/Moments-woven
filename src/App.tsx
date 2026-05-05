@@ -75,7 +75,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A0A0C] font-sans antialiased text-slate-100 selection:bg-emerald-500/30">
+    <div className="min-h-screen overflow-hidden bg-[#0A0A0C] font-sans antialiased text-slate-100 selection:bg-emerald-500/30">
       <AnimatePresence mode="wait">
         {state === "home" && (
           <motion.div
@@ -83,13 +83,13 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, scale: 0.98 }}
-            className="flex items-center justify-center p-6 min-h-screen relative overflow-hidden"
+            className="flex h-dvh items-start justify-center overflow-y-auto overflow-x-hidden px-6 py-6 md:items-center md:overflow-hidden md:py-0 relative"
           >
             {/* Decorative Background Elements */}
-            <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-indigo-900/10 rounded-full blur-[120px] pointer-events-none"></div>
-            <div className="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-emerald-900/10 rounded-full blur-[100px] pointer-events-none"></div>
+            <div className="absolute top-[-10%] right-[-5%] w-125 h-125 bg-indigo-900/10 rounded-full blur-[120px] pointer-events-none"></div>
+            <div className="absolute bottom-[-10%] left-[-5%] w-100 h-100 bg-emerald-900/10 rounded-full blur-[100px] pointer-events-none"></div>
 
-            <div className="max-w-md w-full bg-white/5 border border-white/10 backdrop-blur-xl rounded-[2.5rem] shadow-2xl p-8 md:p-12 space-y-8 relative z-10">
+            <div className="my-auto max-w-md w-full bg-white/5 border border-white/10 backdrop-blur-xl rounded-[2.5rem] shadow-2xl p-8 md:p-12 space-y-8 relative z-10">
               <div className="space-y-6">
                 <div className="flex justify-between items-start">
                   <div className="w-10" /> {/* Spacer */}
@@ -179,6 +179,13 @@ export default function App() {
                     Generate Magic
                   </motion.button>
                 </form>
+
+                <footer className="page-footer" aria-label="Site credits">
+                  <p>
+                    <a href="https://icons8.com/" target="_blank" rel="noreferrer">Ai icon by Icons8</a>
+                  </p>
+                  <p>&copy; 2026 Moments Woven. All rights reserved.</p>
+                </footer>
               </div>
             </div>
           </motion.div>
@@ -239,9 +246,9 @@ export default function App() {
               initial={{ scale: 0.9, opacity: 0, y: 20 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0, y: 20 }}
-              className="bg-[#121214] border border-white/10 w-full max-w-2xl rounded-[2rem] overflow-hidden flex flex-col max-h-[80vh] shadow-2xl"
+              className="bg-[#121214] border border-white/10 w-full max-w-2xl rounded-4xl overflow-hidden flex flex-col max-h-[80vh] shadow-2xl"
             >
-              <div className="p-8 border-b border-white/5 flex justify-between items-center bg-white/[0.02]">
+              <div className="p-8 border-b border-white/5 flex justify-between items-center bg-white/2">
                 <div>
                   <h2 className="text-2xl font-serif italic text-white flex items-center gap-3">
                     <Bookmark size={24} className="text-emerald-400" />
@@ -270,7 +277,7 @@ export default function App() {
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
                       key={i}
-                      className="group bg-white/[0.03] hover:bg-white/[0.05] border border-white/5 rounded-2xl p-6 transition-all"
+                      className="group bg-white/3 hover:bg-white/5 border border-white/5 rounded-2xl p-6 transition-all"
                     >
                       <div className="flex justify-between items-start gap-4">
                         <div className="space-y-3">
